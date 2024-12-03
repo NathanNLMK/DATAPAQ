@@ -1,6 +1,8 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
-from views import datapaq, home, login
+from views.home import createPage as createHomePage
+from views.login import createPage as createLoginPage
+from views.datapaq import createPage as createDatapaqPage
 import streamlit_authenticator as stauth
 
 import pandas as pd
@@ -30,13 +32,13 @@ with st.sidebar:
     )
 
 if selected=="Home":
-    home.createPage()
+    createHomePage()
 
 if selected=="Login":
-    login.createPage()
+    createLoginPage()
 
 if selected=="Datapaq":
-    datapaq.createPage()
+    createDatapaqPage()
 
 
 
