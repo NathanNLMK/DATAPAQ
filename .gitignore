@@ -4,3 +4,4 @@ __pycache__/
 .vscode/
 .idea/    # si vous utilisez IntelliJ ou PyCharm
 *.db
+.streamlit/secrets.toml

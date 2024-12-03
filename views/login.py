@@ -2,19 +2,15 @@ import streamlit as st
 import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
-import os 
-from dotenv import load_dotenv
-dotenv_path = '.env'
-load_dotenv(dotenv_path)
 
 def load_config():
     with open('config.yaml') as file:
         template = file.read()
         config_string = template.format(
-            COOKIE_KEY=os.getenv('COOKIE_KEY'),
-            USER1_PASSWORD=os.getenv('USER1_PASSWORD'),
-            USER2_PASSWORD=os.getenv('USER2_PASSWORD'),
-            USER3_PASSWORD=os.getenv('USER3_PASSWORD')
+            COOKIE_KEY=st.secrets["COOKIE_KEY"],
+            USER1_PASSWORD=st.secrets["USER1_PASSWORD"],
+            USER2_PASSWORD=st.secrets["USER2_PASSWORD"],
+            USER3_PASSWORD=st.secrets["USER3_PASSWORD"]
         )
         config = yaml.safe_load(config_string)
     return config

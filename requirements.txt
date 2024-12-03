@@ -6,3 +6,6 @@ matplotlib
 PyYAML
 streamlit_option_menu
 streamlit_authenticator
+python-dotenv
+openpyxl
+tables

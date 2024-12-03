@@ -305,6 +305,8 @@ def Run_graph(essai_index,optimized_h_values):
 def createPage():
     if st.session_state['authentication_status'] is None:
         st.write("Il faut d'abord vous login pour voir les resultats")
+    elif st.session_state['authentication_status'] is False:
+        st.error('Username/password is incorrect')
     else:
         st.write("H calculé pour la zone 1 = ", optimized_h_values[0])
         st.write("H calculé pour la zone 2 = ", optimized_h_values[1])
