@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+scipy
+matplotlib
+PyYAML
+streamlit_option_menu
+streamlit_authenticator
