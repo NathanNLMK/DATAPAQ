@@ -17,25 +17,24 @@ from scipy import optimize
 from scipy.optimize import minimize
 
 st.set_page_config(layout="centered")
-v_menu=["Home", "Login", "Datapaq"]
+v_menu=["Login","Home", "Datapaq"]
 
 with st.sidebar:
 
-    st.header("MULTPAGE WITH OPTION MENU")
-
     selected = option_menu(
-        menu_title=None,  # required
+        menu_title="DATAPAQ",  # required
         options=v_menu,  # required
         icons=None,  # optional
-        menu_icon="menu-down",  # optional
+        menu_icon="thermometer-high",  # optional
         default_index=0,  # optional
     )
+
+if selected=="Login":
+    createLoginPage()
 
 if selected=="Home":
     createHomePage()
 
-if selected=="Login":
-    createLoginPage()
 
 if selected=="Datapaq":
     createDatapaqPage()

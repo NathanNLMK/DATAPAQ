@@ -4,11 +4,11 @@ cookie:
   name: "some_cookie_name"
 credentials:
   usernames:
-    jsmith:
+    nathanc:
       email: "jsmith@gmail.com"
       failed_login_attempts: 0 # Will be managed automatically
-      first_name: "John"
-      last_name: "Smith"
+      first_name: "Nathan"
+      last_name: "Correger"
       logged_in: False # Will be managed automatically
       password: {USER1_PASSWORD} # Will be hashed automatically
       roles: ["admin", "editor", "viewer"]
@@ -23,11 +23,11 @@ credentials:
       - admin
       - editor
       - viewer
-    rbriggs:
+    antoineg:
       email: "rbriggs@gmail.com"
       failed_login_attempts: 0 # Will be managed automatically
-      first_name: "Rebecca"
-      last_name: "Briggs"
+      first_name: "Antoine"
+      last_name: "Golfouse"
       logged_in: False # Will be managed automatically
       password: {USER3_PASSWORD} # Will be hashed automatically
       roles: # Optional
